@@ -37,9 +37,9 @@ typedef unsigned __int32 uint32_t;
 #endif
 #include <limits.h>
 
-#include "libopensc/pkcs15.h"
-#include "libopensc/asn1.h"
 #include "util.h"
+#include "libopensc/pkcs15/pkcs15.h"
+#include "libopensc/core/asn1.h"
 
 static const char *app_name = "pkcs15-tool";
 

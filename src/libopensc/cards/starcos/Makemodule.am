@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/starcos/card-starcos.c \
+	src/libopensc/cards/starcos/pkcs15-starcert.c \
+	src/libopensc/cards/starcos/starcos-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/starcos/starcos.profile

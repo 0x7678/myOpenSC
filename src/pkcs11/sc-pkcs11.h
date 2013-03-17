@@ -23,14 +23,13 @@
 
 #include "config.h"
 
-#include "libopensc/opensc.h"
-#include "libopensc/pkcs15.h"
-#include "libopensc/log.h"
+#include "libopensc/core/internal.h"
+#include "libopensc/pkcs15/pkcs15.h"
 
 #define CRYPTOKI_EXPORTS
 #include "pkcs11.h"
 #include "pkcs11-opensc.h"
-#include "pkcs11-display.h"
+#include "display.h"
 
 #ifdef __cplusplus
 extern "C" {

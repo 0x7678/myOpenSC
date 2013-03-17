@@ -27,8 +27,7 @@
 #include <openssl/x509v3.h>
 #include <openssl/pem.h>
 
-#include "common/compat_getopt.h"
-#include "libopensc/opensc.h"
+#include "util.h"
 
 static struct {
 	const char *path;

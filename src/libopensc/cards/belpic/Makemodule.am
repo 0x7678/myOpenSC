@@ -1,0 +1,2 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/belpic/card-belpic.c

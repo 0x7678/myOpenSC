@@ -26,8 +26,6 @@
 #include <openssl/pem.h>
 #include <openssl/err.h>
 
-#include "libopensc/pkcs15.h"
-#include "common/compat_strlcpy.h"
 #include "util.h"
 
 static const char *app_name = "cryptoflex-tool";

@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/flex/card-flex.c \
+	src/libopensc/cards/flex/flex-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/flex/flex.profile \
+	src/libopensc/cards/flex/cyberflex.profile

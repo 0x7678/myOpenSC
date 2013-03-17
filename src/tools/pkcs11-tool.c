@@ -44,10 +44,11 @@
 #include <openssl/err.h>
 #endif
 
+#include "util.h"
 #include "pkcs11/pkcs11.h"
 #include "pkcs11/pkcs11-opensc.h"
-#include "libopensc/asn1.h"
-#include "util.h"
+#include "libopensc/core/asn1.h"
+
 
 extern void *C_LoadModule(const char *name, CK_FUNCTION_LIST_PTR_PTR);
 extern CK_RV C_UnloadModule(void *module);

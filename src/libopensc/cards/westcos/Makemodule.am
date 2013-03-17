@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/westcos/card-westcos.c \
+	src/libopensc/cards/westcos/pkcs15-westcos.c \
+	src/libopensc/cards/westcos/westcos-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/westcos/westcos.profile

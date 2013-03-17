@@ -1,0 +1,3 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/gemsafe-v1/card-gemsafeV1.c \
+	src/libopensc/cards/gemsafe-v1/pkcs15-gemsafeV1.c

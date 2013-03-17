@@ -38,11 +38,12 @@
 #include <openssl/bn.h>
 #include <openssl/rand.h>
 
-#include "libopensc/opensc.h"
-#include "libopensc/cardctl.h"
-#include "libopensc/asn1.h"
-#include "libopensc/card-sc-hsm.h"
 #include "util.h"
+
+#include "libopensc/core/cardctl.h"
+#include "libopensc/core/asn1.h"
+#include "libopensc/cards/smartcardhsm/card-sc-hsm.h"
+
 
 static const char *app_name = "sc-hsm-tool";
 

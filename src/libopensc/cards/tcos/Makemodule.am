@@ -1,0 +1,3 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/tcos/card-tcos.c \
+	src/libopensc/cards/tcos/pkcs15-tcos.c

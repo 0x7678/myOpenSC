@@ -1,0 +1,6 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/incrypto/card-incrypto34.c \
+	src/libopensc/cards/incrypto/incrypto-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/incrypto/incrypto34.profile

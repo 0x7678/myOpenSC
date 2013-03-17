@@ -1,0 +1,6 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/ibm-bluez/bluez-init.c \
+	src/libopensc/cards/ibm-bluez/card-jcop.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/ibm-bluez/jcop.profile

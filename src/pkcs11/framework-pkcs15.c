@@ -19,17 +19,18 @@
  */
 
 #include "config.h"
-#include "libopensc/log.h"
-#include "libopensc/asn1.h"
-
-#include "libopensc/cardctl.h"
 
 #include <stdlib.h>
 #include <string.h>
 
+#include "libopensc/core/internal.h"
+#include "libopensc/core/asn1.h"
+#include "libopensc/core/cardctl.h"
+
 #include "sc-pkcs11.h"
+
 #ifdef USE_PKCS15_INIT
-#include "pkcs15init/pkcs15-init.h"
+#include "libopensc/pkcs15/init.h"
 #endif
 
 struct pkcs15_slot_data {

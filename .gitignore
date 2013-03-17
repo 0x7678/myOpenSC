@@ -1,6 +1,5 @@
 Makefile
 Makefile.in
-core
 archive
 acinclude.m4
 aclocal.m4
@@ -53,6 +52,7 @@ stamp-h*
 *.css
 *.out
 *.tmp
+.dirstamp
 ChangeLog
 
 
@@ -60,23 +60,23 @@ etc/opensc.conf.win
 etc/opensc.conf
 src/common/compat_getopt_main
 src/minidriver/opensc-minidriver.inf
-src/tools/cardos-tool
-src/tools/iasecc-tool
-src/tools/openpgp-tool
-src/tools/sc-hsm-tool
-src/tools/westcos-tool
-src/tools/pkcs15-tool
-src/tools/pkcs15-crypt
-src/tools/pkcs15-init
-src/tools/piv-tool
-src/tools/eidenv
-src/tools/opensc-explorer
-src/tools/opensc-tool
-src/tools/rutoken-tool
-src/tools/cardos-info
-src/tools/cryptoflex-tool
-src/tools/netkey-tool
-src/tools/pkcs11-tool
+cardos-tool
+iasecc-tool
+openpgp-tool
+sc-hsm-tool
+westcos-tool
+pkcs15-tool
+pkcs15-crypt
+pkcs15-init
+piv-tool
+eidenv
+opensc-explorer
+opensc-tool
+rutoken-tool
+cardos-info
+cryptoflex-tool
+netkey-tool
+pkcs11-tool
 
 win32/OpenSC.iss
 win32/OpenSC.wxs
@@ -90,11 +90,3 @@ build/
 engine_pkcs11/
 libp11/
 target/
-
-src/scconf/test-conf
-
-src/tests/base64
-src/tests/lottery
-src/tests/p15dump
-src/tests/pintest
-src/tests/prngtest

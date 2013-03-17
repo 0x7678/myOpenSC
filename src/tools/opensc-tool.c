@@ -30,9 +30,8 @@
 #include <ctype.h>
 #include <sys/stat.h>
 
-#include "libopensc/opensc.h"
-#include "libopensc/cardctl.h"
 #include "util.h"
+#include "libopensc/core/cardctl.h"
 
 /* type for associations of IDs to names */
 typedef struct _id2str {

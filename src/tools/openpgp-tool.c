@@ -27,12 +27,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "common/compat_getopt.h"
-#include "libopensc/opensc.h"
-#include "libopensc/asn1.h"
-#include "libopensc/cards.h"
-#include "libopensc/cardctl.h"
 #include "util.h"
+#include "libopensc/core/cardctl.h"
 
 #define	OPT_RAW		256
 #define	OPT_PRETTY	257

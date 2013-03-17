@@ -1,0 +1,4 @@
+include src/libopensc/common/Makemodule.am
+include src/libopensc/Makemodule.am
+include src/pkcs11/Makemodule.am
+include src/tools/Makemodule.am

@@ -1,0 +1,3 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/piv/card-piv.c \
+	src/libopensc/cards/piv/pkcs15-piv.c

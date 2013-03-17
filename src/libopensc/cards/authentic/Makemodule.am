@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/authentic/authentic-init.c \
+	src/libopensc/cards/authentic/authentic.h \
+	src/libopensc/cards/authentic/card-authentic.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/authentic/authentic.profile

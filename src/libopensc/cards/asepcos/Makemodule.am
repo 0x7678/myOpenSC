@@ -1,0 +1,6 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/asepcos/asepcos-init.c \
+	src/libopensc/cards/asepcos/card-asepcos.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/asepcos/asepcos.profile

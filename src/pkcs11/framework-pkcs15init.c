@@ -25,7 +25,7 @@
 
 #include "sc-pkcs11.h"
 #ifdef USE_PKCS15_INIT
-#include "pkcs15init/pkcs15-init.h"
+#include "libopensc/pkcs15/init.h"
 
 /*
  * Deal with uninitialized cards

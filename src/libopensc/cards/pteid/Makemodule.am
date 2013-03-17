@@ -1,0 +1,3 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/pteid/card-ias.c \
+	src/libopensc/cards/pteid/pkcs15-pteid.c

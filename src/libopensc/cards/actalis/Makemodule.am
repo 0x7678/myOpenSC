@@ -1,0 +1,2 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/actalis/pkcs15-actalis.c

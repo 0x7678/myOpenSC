@@ -27,12 +27,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "common/compat_getopt.h"
-#include "libopensc/opensc.h"
-#include "libopensc/asn1.h"
-#include "libopensc/cards.h"
-#include "libopensc/esteid.h"
 #include "util.h"
+#include "libopensc/cards/esteid/esteid.h"
+#include "libopensc/core/asn1.h"
 
 static char *opt_reader = NULL;
 static int stats = 0;

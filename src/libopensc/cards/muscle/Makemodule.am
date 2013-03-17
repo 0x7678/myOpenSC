@@ -1,0 +1,10 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/muscle/card-muscle.c \
+	src/libopensc/cards/muscle/muscle-filesystem.c \
+	src/libopensc/cards/muscle/muscle-filesystem.h \
+	src/libopensc/cards/muscle/muscle-init.c \
+	src/libopensc/cards/muscle/muscle.c \
+	src/libopensc/cards/muscle/muscle.h
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/muscle/muscle.profile

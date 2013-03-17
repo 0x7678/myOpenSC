@@ -1,17 +1,17 @@
 dnl -*- mode: m4; -*-
 
-AC_PREREQ(2.60)
+AC_PREREQ(2.67)
 
 define([PACKAGE_VERSION_MAJOR], [0])
 define([PACKAGE_VERSION_MINOR], [13])
-define([PACKAGE_VERSION_FIX], [0])
-define([PACKAGE_SUFFIX], [])
+define([PACKAGE_VERSION_FIX], [1])
+define([PACKAGE_SUFFIX], [-pre1])
 
 AC_INIT([opensc],[PACKAGE_VERSION_MAJOR.PACKAGE_VERSION_MINOR.PACKAGE_VERSION_FIX[]PACKAGE_SUFFIX])
 AC_CONFIG_AUX_DIR([.])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
-AM_INIT_AUTOMAKE(foreign 1.10)
+AM_INIT_AUTOMAKE([foreign 1.11 subdir-objects dist-bzip2])
 
 OPENSC_VERSION_MAJOR="PACKAGE_VERSION_MAJOR"
 OPENSC_VERSION_MINOR="PACKAGE_VERSION_MINOR"
@@ -27,7 +27,7 @@ OPENSC_LT_REVISION="0"
 OPENSC_LT_AGE="0"
 OPENSC_LT_AGE="$((${OPENSC_LT_CURRENT}-${OPENSC_LT_OLDEST}))"
 
-AC_CONFIG_SRCDIR([src/libopensc/sc.c])
+AC_CONFIG_SRCDIR([src/libopensc/core/ctx.c])
 
 # silent build by default
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -128,7 +128,7 @@ AC_ARG_ENABLE(
 
 AC_ARG_ENABLE(
 	[pcsc],
-	[AS_HELP_STRING([--disable-pcsc],[disable pcsc support @<:@enabled@:>@])],
+	[AS_HELP_STRING([--disable-pcsc],[disable PC/SC support @<:@enabled@:>@])],
 	,
 	[enable_pcsc="yes"]
 )
@@ -243,9 +243,14 @@ AC_HEADER_STDC
 AC_HEADER_SYS_WAIT
 AC_HEADER_ASSERT
 AC_CHECK_HEADERS([ \
-	errno.h fcntl.h stdlib.h \
-	inttypes.h string.h strings.h \
-	sys/time.h unistd.h getopt.h sys/mman.h
+	errno.h \
+	inttypes.h \
+	string.h \
+	strings.h \
+	sys/time.h \
+	unistd.h \
+	getopt.h \
+	sys/mman.h
 ])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
@@ -259,9 +264,13 @@ AC_FUNC_ERROR_AT_LINE
 AC_FUNC_STAT
 AC_FUNC_VPRINTF
 AC_CHECK_FUNCS([ \
-	getpass gettimeofday memset mkdir \
-	strdup strerror getopt_long getopt_long_only \
-	strlcpy strlcat
+	getpass \
+	gettimeofday \
+	strdup \
+	getopt_long \
+	getopt_long_only \
+	strlcpy \
+	strlcat
 ])
 AC_CHECK_SIZEOF(void *)
 if test "${ac_cv_sizeof_void_p}" = 8; then
@@ -603,29 +612,9 @@ fi
 
 AC_CONFIG_FILES([
 	Makefile
-	doc/Makefile
-	doc/tools/Makefile
-	etc/Makefile
-	src/Makefile
-	src/common/Makefile
-	src/libopensc/Makefile
-	src/libopensc/libopensc.pc
-	src/libsm/Makefile
-	src/pkcs11/Makefile
-	src/pkcs15init/Makefile
-	src/scconf/Makefile
-	src/tests/Makefile
-	src/tests/regression/Makefile
-	src/tools/Makefile
-	src/smm/Makefile
-	src/minidriver/Makefile
-	src/minidriver/opensc-minidriver.inf
-	win32/Makefile
 	win32/versioninfo.rc
 	win32/winconfig.h
-	win32/OpenSC.iss
 	win32/OpenSC.wxs
-	MacOSX/Makefile
 	MacOSX/build-package
 	MacOSX/resources/ReadMe.html
 ])

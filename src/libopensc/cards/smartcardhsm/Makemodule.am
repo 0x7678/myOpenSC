@@ -1,0 +1,8 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/smartcardhsm/card-sc-hsm.c \
+	src/libopensc/cards/smartcardhsm/card-sc-hsm.h \
+	src/libopensc/cards/smartcardhsm/pkcs15-sc-hsm.c \
+	src/libopensc/cards/smartcardhsm/sc-hsm-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/smartcardhsm/sc-hsm.profile

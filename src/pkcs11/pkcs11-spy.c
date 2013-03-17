@@ -32,7 +32,7 @@
 #endif
 
 #define CRYPTOKI_EXPORTS
-#include "pkcs11-display.h"
+#include "display.h"
 
 #define __PASTE(x,y)      x##y
 

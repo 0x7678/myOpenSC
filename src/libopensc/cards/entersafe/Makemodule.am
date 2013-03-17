@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/entersafe/card-entersafe.c \
+	src/libopensc/cards/entersafe/entersafe-init.c \
+	src/libopensc/cards/entersafe/pkcs15-esinit.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/entersafe/entersafe.profile

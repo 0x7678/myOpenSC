@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/cardos/card-cardos.c \
+	src/libopensc/cards/cardos/cardos-init.c \
+	src/libopensc/cards/cardos/pkcs15-tccardos.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/cardos/cardos.profile

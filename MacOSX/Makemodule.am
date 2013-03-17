@@ -1,0 +1,14 @@
+## include some more files
+EXTRA_DIST += \
+	MacOSX/build \
+	MacOSX/build-package.in \
+	MacOSX/libtool-bundle \
+	MacOSX/opensc-uninstall \
+	MacOSX/resources \
+	MacOSX/resources/background.jpg \
+	MacOSX/resources/InstallationCheck.strings \
+	MacOSX/resources/License.html \
+	MacOSX/resources/ReadMe.html.in \
+	MacOSX/scripts \
+	MacOSX/scripts/InstallationCheck \
+	MacOSX/scripts/postflight

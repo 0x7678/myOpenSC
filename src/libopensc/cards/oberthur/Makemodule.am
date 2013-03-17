@@ -1,0 +1,9 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/oberthur/card-oberthur.c \
+	src/libopensc/cards/oberthur/oberthur-init.c \
+	src/libopensc/cards/oberthur/pkcs15-oberthur-awp.c \
+	src/libopensc/cards/oberthur/pkcs15-oberthur.c \
+	src/libopensc/cards/oberthur/pkcs15-oberthur.h
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/oberthur/oberthur.profile

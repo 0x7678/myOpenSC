@@ -1,0 +1,6 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/myeid/card-myeid.c \
+	src/libopensc/cards/myeid/myeid-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/myeid/myeid.profile

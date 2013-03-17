@@ -1,0 +1,14 @@
+EXTRA_DIST += \
+	win32/Makefile.mak \
+	win32/Make.rules.mak \
+	win32/versioninfo.rc.in \
+	win32/winconfig.h.in \
+	win32/OpenSC.wxs.in
+
+noinst_HEADERS += \
+	win32/versioninfo.rc \
+	win32/winconfig.h \
+	win32/OpenSC.wxs \
+	win32/license.rtf \
+	win32/OpenSC.ico
+

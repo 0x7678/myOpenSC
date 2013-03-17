@@ -1,0 +1,6 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/rutoken-ecp/card-rtecp.c \
+	src/libopensc/cards/rutoken-ecp/rutoken-ecp-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/rutoken-ecp/rutoken_ecp.profile

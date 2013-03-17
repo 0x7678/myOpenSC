@@ -33,10 +33,9 @@
 #include <openssl/dsa.h>
 #endif
 
-#include "common/compat_getpass.h"
-#include "libopensc/opensc.h"
-#include "libopensc/pkcs15.h"
 #include "util.h"
+#include "libopensc/pkcs15/pkcs15.h"
+
 
 static const char *app_name = "pkcs15-crypt";
 

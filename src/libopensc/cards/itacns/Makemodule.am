@@ -1,0 +1,4 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/itacns/card-itacns.c \
+	src/libopensc/cards/itacns/itacns.h \
+	src/libopensc/cards/itacns/pkcs15-itacns.c

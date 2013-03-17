@@ -1,25 +1,31 @@
 ACLOCAL_AMFLAGS = -I m4
 
-MAINTAINERCLEANFILES = \
-	config.log config.status \
-	$(srcdir)/Makefile.in \
-	$(srcdir)/config.h.in $(srcdir)/config.h.in~ $(srcdir)/configure \
-	$(srcdir)/install-sh $(srcdir)/ltmain.sh $(srcdir)/missing \
-	$(srcdir)/depcomp $(srcdir)/aclocal.m4 \
-	$(srcdir)/config.guess $(srcdir)/config.sub \
-	$(srcdir)/m4/ltsugar.m4 $(srcdir)/m4/libtool.m4 \
-	$(srcdir)/m4/ltversion.m4 $(srcdir)/m4/lt~obsolete.m4 \
-	$(srcdir)/m4/ltoptions.m4 \
-	$(srcdir)/packaged
-EXTRA_DIST = Makefile.mak
+# Extra files need to get into the tarball
+EXTRA_DIST = bootstrap
+# libraries are created
+lib_LTLIBRARIES =
+# commands are created
+bin_PROGRAMS =
+# there are loads of internal headers
+noinst_HEADERS =
 
-SUBDIRS = etc src win32 doc MacOSX
-
-dist_noinst_SCRIPTS = bootstrap
-dist_noinst_DATA = README \
-	solaris/Makefile solaris/README solaris/checkinstall.in \
-	solaris/opensc.conf-dist solaris/pkginfo.in solaris/proto
+# could be removed if "foreign" was removed?
+dist_noinst_DATA = README
 dist_doc_DATA = NEWS
+
+AM_CPPFLAGS = -I$(top_srcdir)/src
+AM_CPPFLAGS += -DOPENSC_CONF_PATH=\"$(sysconfdir)/opensc.conf\"
+AM_CPPFLAGS += -DSC_PKCS15_PROFILE_DIRECTORY=\"$(pkgdatadir)\"
+
+AM_CFLAGS = $(OPTIONAL_OPENSSL_CFLAGS)
+AM_CFLAGS += $(OPTIONAL_PCSC_CFLAGS)
+AM_CFLAGS += $(OPTIONAL_OPENCT_CFLAGS)
+AM_CFLAGS += $(OPTIONAL_ZLIB_CFLAGS)
+
+
+include src/Makemodule.am
+include MacOSX/Makemodule.am
+include win32/Makemodule.am
 
 Generate-ChangeLog:
 	rm -f ChangeLog.tmp "$(srcdir)/ChangeLog"
@@ -33,3 +39,12 @@ Generate-ChangeLog:
 	fi
 	mv ChangeLog.tmp "$(srcdir)/ChangeLog"
 	( cd "$(srcdir)" && autoreconf -ivf )
+
+
+# If substituted information is needed, define it here
+libopensc_la_LDFLAGS = $(AM_LDFLAGS) \
+	-version-info @OPENSC_LT_CURRENT@:@OPENSC_LT_REVISION@:@OPENSC_LT_AGE@ \
+	-export-symbols "$(top_srcdir)/src/libopensc/libopensc.exports" \
+	-no-undefined
+
+# handle the conf file

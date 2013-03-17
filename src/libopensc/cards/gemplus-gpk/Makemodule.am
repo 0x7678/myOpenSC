@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/gemplus-gpk/card-gpk.c \
+	src/libopensc/cards/gemplus-gpk/gpk-init.c \
+	src/libopensc/cards/gemplus-gpk/pkcs15-gemsafeGPK.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/gemplus-gpk/gpk.profile

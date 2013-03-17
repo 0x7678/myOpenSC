@@ -1,0 +1,96 @@
+noinst_HEADERS += src/tools/util.h
+
+bin_PROGRAMS += \
+	opensc-tool \
+	opensc-explorer \
+	pkcs15-tool \
+	pkcs15-crypt \
+	pkcs11-tool \
+	cardos-tool \
+	eidenv \
+	openpgp-tool \
+	iasecc-tool \
+	cryptoflex-tool \
+	pkcs15-init \
+	netkey-tool \
+	piv-tool \
+	westcos-tool \
+	sc-hsm-tool
+
+opensc_tool_SOURCES = \
+	src/tools/opensc-tool.c \
+	src/tools/util.c
+opensc_tool_LDADD = libopensc.la
+
+piv_tool_SOURCES = \
+	src/tools/piv-tool.c \
+	src/tools/util.c
+piv_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+
+opensc_explorer_SOURCES = \
+	src/tools/opensc-explorer.c \
+	src/tools/util.c
+opensc_explorer_LDADD = $(OPTIONAL_READLINE_LIBS) libopensc.la libcompat.la
+
+pkcs15_tool_SOURCES = \
+	src/tools/pkcs15-tool.c \
+	src/tools/util.c
+pkcs15_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+
+pkcs11_tool_SOURCES = \
+	src/tools/pkcs11-tool.c \
+	src/tools/util.c
+pkcs11_tool_LDADD = \
+	libopensc.la \
+	libpkcs11.la \
+	libscdl.la \
+	$(OPTIONAL_OPENSSL_LIBS)
+
+pkcs15_crypt_SOURCES = \
+	src/tools/pkcs15-crypt.c \
+	src/tools/util.c
+pkcs15_crypt_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+
+cryptoflex_tool_SOURCES = \
+	src/tools/cryptoflex-tool.c \
+	src/tools/util.c
+cryptoflex_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la libcompat.la
+
+pkcs15_init_SOURCES = \
+	src/tools/pkcs15-init.c \
+	src/tools/util.c
+pkcs15_init_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la libcompat.la
+
+cardos_tool_SOURCES = \
+	src/tools/cardos-tool.c \
+	src/tools/util.c
+cardos_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+
+eidenv_SOURCES = \
+	src/tools/eidenv.c \
+	src/tools/util.c
+eidenv_LDADD = libopensc.la
+
+netkey_tool_SOURCES = src/tools/netkey-tool.c
+netkey_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+
+westcos_tool_SOURCES = \
+	src/tools/westcos-tool.c \
+	src/tools/util.c
+westcos_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+
+openpgp_tool_SOURCES = \
+	src/tools/openpgp-tool.c \
+	src/tools/util.c
+openpgp_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+
+iasecc_tool_SOURCES = \
+	src/tools/iasecc-tool.c \
+	src/tools/util.c
+iasecc_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+
+sc_hsm_tool_SOURCES = \
+	src/tools/sc-hsm-tool.c \
+	src/tools/util.c
+sc_hsm_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) libopensc.la
+

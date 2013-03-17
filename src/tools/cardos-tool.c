@@ -38,7 +38,6 @@
 #include <openssl/sha.h>
 #endif
 
-#include "libopensc/opensc.h"
 #include "util.h"
 
 static const char *app_name = "cardos-tool";

@@ -1,0 +1,116 @@
+# build a single (dynamic) library
+lib_LTLIBRARIES += libopensc.la
+
+dist_pkgdata_DATA = 
+libopensc_la_SOURCES =
+
+# include card drivers
+include src/libopensc/cards/acos5/Makemodule.am
+include src/libopensc/cards/actalis/Makemodule.am
+include src/libopensc/cards/akis/Makemodule.am
+include src/libopensc/cards/asepcos/Makemodule.am
+include src/libopensc/cards/atrust-acos/Makemodule.am
+include src/libopensc/cards/authentic/Makemodule.am
+include src/libopensc/cards/belpic/Makemodule.am
+include src/libopensc/cards/cardos/Makemodule.am
+include src/libopensc/cards/entersafe/Makemodule.am
+include src/libopensc/cards/epass2003/Makemodule.am
+include src/libopensc/cards/esteid/Makemodule.am
+include src/libopensc/cards/flex/Makemodule.am
+include src/libopensc/cards/gemplus-gpk/Makemodule.am
+include src/libopensc/cards/gemsafe-v1/Makemodule.am
+include src/libopensc/cards/ias-ecc/Makemodule.am
+include src/libopensc/cards/ibm-bluez/Makemodule.am
+include src/libopensc/cards/incrypto/Makemodule.am
+include src/libopensc/cards/infocamere/Makemodule.am
+include src/libopensc/cards/iso-standard/Makemodule.am
+include src/libopensc/cards/itacns/Makemodule.am
+include src/libopensc/cards/micardo/Makemodule.am
+include src/libopensc/cards/miocos/Makemodule.am
+include src/libopensc/cards/muscle/Makemodule.am
+include src/libopensc/cards/myeid/Makemodule.am
+include src/libopensc/cards/oberthur/Makemodule.am
+include src/libopensc/cards/openpgp/Makemodule.am
+include src/libopensc/cards/piv/Makemodule.am
+include src/libopensc/cards/postecert/Makemodule.am
+include src/libopensc/cards/pteid/Makemodule.am
+include src/libopensc/cards/rutoken/Makemodule.am
+include src/libopensc/cards/rutoken-ecp/Makemodule.am
+include src/libopensc/cards/setcos/Makemodule.am
+include src/libopensc/cards/smartcardhsm/Makemodule.am
+include src/libopensc/cards/starcos/Makemodule.am
+include src/libopensc/cards/tcos/Makemodule.am
+include src/libopensc/cards/westcos/Makemodule.am
+
+# include all core files.
+libopensc_la_SOURCES += \
+	src/libopensc/core/apdu.c \
+	src/libopensc/core/asn1.c \
+	src/libopensc/core/asn1.h \
+	src/libopensc/core/base64.c \
+	src/libopensc/core/card.c \
+	src/libopensc/core/cardctl.h \
+	src/libopensc/core/cards.h \
+	src/libopensc/core/compression.c \
+	src/libopensc/core/compression.h \
+	src/libopensc/core/ctapi.c \
+	src/libopensc/core/ctbcs.c \
+	src/libopensc/core/ctbcs.h \
+	src/libopensc/core/ctx.c \
+	src/libopensc/core/dir.c \
+	src/libopensc/core/ef-atr.c \
+	src/libopensc/core/errors.c \
+	src/libopensc/core/errors.h \
+	src/libopensc/core/internal-winscard.h \
+	src/libopensc/core/internal.h \
+	src/libopensc/core/iso7816.c \
+	src/libopensc/core/iso7816.h \
+	src/libopensc/core/log.c \
+	src/libopensc/core/log.h \
+	src/libopensc/core/openct.c \
+	src/libopensc/core/opensc.h \
+	src/libopensc/core/p15card-helper.c \
+	src/libopensc/core/p15card-helper.h \
+	src/libopensc/core/pace.h \
+	src/libopensc/core/padding.c \
+	src/libopensc/core/pcsc.c \
+	src/libopensc/core/sc.c \
+	src/libopensc/core/sec.c \
+	src/libopensc/core/sm.c \
+	src/libopensc/core/sm.h \
+	src/libopensc/core/types.h \
+	\
+	src/libopensc/libopensc.exports \
+	\
+	src/libopensc/pkcs15/algo.c \
+	src/libopensc/pkcs15/cache.c \
+	src/libopensc/pkcs15/cert.c \
+	src/libopensc/pkcs15/data.c \
+	src/libopensc/pkcs15/pin.c \
+	src/libopensc/pkcs15/emulation.c \
+	src/libopensc/pkcs15/pkcs15.c \
+	src/libopensc/pkcs15/pkcs15.h \
+	src/libopensc/pkcs15/prkey.c \
+	src/libopensc/pkcs15/pubkey.c \
+	src/libopensc/pkcs15/sec.c \
+	src/libopensc/pkcs15/skey.c \
+	src/libopensc/pkcs15/init.c \
+	src/libopensc/pkcs15/init.h \
+	src/libopensc/pkcs15/profile.h \
+	src/libopensc/pkcs15/profile.c \
+	\
+	src/libopensc/scconf/internal.h	\
+	src/libopensc/scconf/parse.c \
+	src/libopensc/scconf/scconf.c \
+	src/libopensc/scconf/scconf.h \
+	src/libopensc/scconf/scconf.h \
+	src/libopensc/scconf/sclex.c \
+	src/libopensc/scconf/write.c
+
+libopensc_la_LIBADD = \
+	$(OPTIONAL_OPENSSL_LIBS) \
+	$(OPTIONAL_OPENCT_LIBS) \
+	$(OPTIONAL_ZLIB_LIBS) \
+	libcompat.la \
+	libscdl.la
+

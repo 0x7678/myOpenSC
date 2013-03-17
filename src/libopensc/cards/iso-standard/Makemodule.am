@@ -1,0 +1,6 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/iso-standard/card-default.c \
+	src/libopensc/cards/iso-standard/card-javacard.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/iso-standard/pkcs15.profile

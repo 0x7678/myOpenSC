@@ -31,11 +31,10 @@
 #include <ctype.h>
 #include <sys/stat.h>
 
-#include "libopensc/opensc.h"
-#include "libopensc/cardctl.h"
-#include "libopensc/asn1.h"
-#include "libopensc/iasecc.h"
 #include "util.h"
+#include "libopensc/core/cardctl.h"
+#include "libopensc/cards/ias-ecc/iasecc.h"
+
 
 static const char *app_name = "iasecc-tool";
 

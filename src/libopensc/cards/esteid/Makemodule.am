@@ -1,0 +1,3 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/esteid/esteid.h \
+	src/libopensc/cards/esteid/pkcs15-esteid.c

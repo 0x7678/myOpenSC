@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/openpgp/card-openpgp.c \
+	src/libopensc/cards/openpgp/openpgp-init.c \
+	src/libopensc/cards/openpgp/pkcs15-openpgp.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/openpgp/openpgp.profile

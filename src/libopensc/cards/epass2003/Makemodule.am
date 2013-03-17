@@ -1,0 +1,7 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/epass2003/card-epass2003.c \
+	src/libopensc/cards/epass2003/epass2003-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/epass2003/epass2003.profile
+	

@@ -1,0 +1,20 @@
+noinst_LTLIBRARIES = libcompat.la libpkcs11.la libscdl.la
+
+libcompat_la_SOURCES = \
+	src/libopensc/common/compat_dummy.c \
+	src/libopensc/common/compat_strlcat.h \
+	src/libopensc/common/compat_strlcat.c \
+	src/libopensc/common/compat_strlcpy.h \
+	src/libopensc/common/compat_strlcpy.c \
+	src/libopensc/common/compat_getopt.c \
+	src/libopensc/common/compat_getopt.h \
+	src/libopensc/common/simclist.c \
+	src/libopensc/common/simclist.h
+
+libpkcs11_la_SOURCES = \
+	src/libopensc/common/libpkcs11.c \
+	src/libopensc/common/libpkcs11.h
+
+libscdl_la_SOURCES = \
+	src/libopensc/common/libscdl.c \
+	src/libopensc/common/libscdl.h

@@ -33,12 +33,9 @@
 #include <openssl/x509v3.h>
 #include <openssl/bn.h>
 
-#include "libopensc/opensc.h"
-#include "libopensc/errors.h"
-#include "libopensc/pkcs15.h"
-#include "libopensc/cardctl.h"
-
 #include "util.h"
+#include "libopensc/pkcs15/pkcs15.h"
+#include "libopensc/core/cardctl.h"
 
 static const char *app_name = "westcos-tool";
 

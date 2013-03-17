@@ -58,15 +58,13 @@
 #endif /* OPENSSL_NO_EC */
 #endif /* OPENSSL_VERSION_NUMBER >= 0x10000000L */
 
-#include "common/compat_strlcpy.h"
-#include "libopensc/cardctl.h"
-#include "libopensc/pkcs15.h"
-#include "libopensc/log.h"
-#include "libopensc/cards.h"
-#include "libopensc/asn1.h"
-#include "pkcs15init/pkcs15-init.h"
-#include "pkcs15init/profile.h"
 #include "util.h"
+#include "libopensc/core/cardctl.h"
+#include "libopensc/core/asn1.h"
+#include "libopensc/pkcs15/pkcs15.h"
+#include "libopensc/pkcs15/init.h"
+#include "libopensc/pkcs15/profile.h"
+
 
 #undef GET_KEY_ECHO_OFF
 

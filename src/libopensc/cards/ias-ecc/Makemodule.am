@@ -1,0 +1,16 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/ias-ecc/card-iasecc.c \
+	src/libopensc/cards/ias-ecc/ias-ecc-init.c \
+	src/libopensc/cards/ias-ecc/iasecc-sdo.c \
+	src/libopensc/cards/ias-ecc/iasecc-sdo.h \
+	src/libopensc/cards/ias-ecc/iasecc-sm.c \
+	src/libopensc/cards/ias-ecc/iasecc.h
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/ias-ecc/ias_adele_admin1.profile \
+	src/libopensc/cards/ias-ecc/ias_adele_admin2.profile \
+	src/libopensc/cards/ias-ecc/ias_adele_common.profile \
+	src/libopensc/cards/ias-ecc/iasecc.profile \
+	src/libopensc/cards/ias-ecc/iasecc_admin_eid.profile \
+	src/libopensc/cards/ias-ecc/iasecc_generic_oberthur.profile \
+	src/libopensc/cards/ias-ecc/iasecc_generic_pki.profile

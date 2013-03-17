@@ -45,10 +45,10 @@
 #include <openssl/err.h>
 #include <openssl/obj_mac.h>
 
-#include "libopensc/opensc.h"
-#include "libopensc/cardctl.h"
-#include "libopensc/asn1.h"
 #include "util.h"
+#include "libopensc/core/cardctl.h"
+#include "libopensc/core/asn1.h"
+
 
 static const char *app_name = "piv-tool";
 

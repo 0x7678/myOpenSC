@@ -1,0 +1,3 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/atrust-acos/card-atrust-acos.c \
+	src/libopensc/cards/atrust-acos/pkcs15-atrust-acos.c

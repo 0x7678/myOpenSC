@@ -36,13 +36,13 @@
 #include <io.h>
 #endif
 
-#include "libopensc/opensc.h"
-#include "libopensc/asn1.h"
-#include "libopensc/cardctl.h"
-#include "libopensc/cards.h"
-#include "common/compat_strlcpy.h"
-#include "common/compat_getopt.h"
 #include "util.h"
+
+#include "libopensc/core/internal.h"
+#include "libopensc/core/asn1.h"
+#include "libopensc/core/cardctl.h"
+
+
 
 #define DIM(v) (sizeof(v)/sizeof((v)[0]))
 

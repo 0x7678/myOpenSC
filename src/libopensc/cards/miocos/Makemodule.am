@@ -1,0 +1,6 @@
+libopensc_la_SOURCES += \
+	src/libopensc/cards/miocos/card-miocos.c \
+	src/libopensc/cards/miocos/miocos-init.c
+
+dist_pkgdata_DATA += \
+	src/libopensc/cards/miocos/miocos.profile
